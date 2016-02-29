@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main_window" tools:context=".MainWindow"
+    android:background="@drawable/background">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lstFrom"
+        android:background="@drawable/listview_bg"
+        android:choiceMode="singleChoice"
+        android:listSelector="@drawable/selector"
+        android:contextClickable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lstTo"
+        android:background="@drawable/listview_bg"
+        android:choiceMode="singleChoice"
+        android:listSelector="@drawable/selector"
+        android:contextClickable="false"
+        android:layout_below="@+id/editInput"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/btnConvert"
+        android:background="@drawable/button"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editOutput"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_alignEnd="@+id/editOutput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="textNoSuggestions"
+        android:id="@+id/editInput"
+        android:background="@drawable/border"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lstFrom"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/lstFrom"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="textNoSuggestions"
+        android:id="@+id/editOutput"
+        android:background="@drawable/border"
+        android:layout_marginTop="30dp"
+        android:layout_alignEnd="@+id/lstTo"
+        android:layout_below="@+id/lstTo"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Input"
+        android:id="@+id/textInput"
+        android:layout_below="@+id/lstFrom"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Output"
+        android:id="@+id/textOutput"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lstTo"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"/>
+
+
+</RelativeLayout>
